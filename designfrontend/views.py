@@ -18,7 +18,6 @@ def Second_Page(request):
 
 
 class GuestLogin(FormView):
-    
     def get(self, request):
         form = LoginForm()
         return render(request, "login.html", {"form":form})
