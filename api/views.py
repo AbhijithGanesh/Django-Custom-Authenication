@@ -57,7 +57,7 @@ class Login(APIView):
         token = Token.objects.get_or_create(user=user_obj)
         return Response(
             {
-                "detail": "Login Successfull",
+                "detail": "Login Successful",
             },
             status=status.HTTP_200_OK,
         )
