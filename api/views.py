@@ -14,6 +14,8 @@ class Register(generics.CreateAPIView):
     queryset = User.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = RegisterSerializer
+    def get(self, request):
+        return Response ( {"Message":"Enter Details to Get a Response"}, status = status.HTTP_204_NO_CONTENT)
 
     def create(self, request):
         serializer = self.get_serializer(data=request.data)
@@ -24,8 +26,6 @@ class Register(generics.CreateAPIView):
             {
                 "token": str(token[0]),
                 "username": serializer.instance.username,
-                "first_name": serializer.instance.first_name,
-                "last_name": serializer.instance.last_name,
             },
             status=status.HTTP_201_CREATED,
         )

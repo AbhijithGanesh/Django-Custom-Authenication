@@ -15,7 +15,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework',
     'api.apps.ApiConfig',
-    'designfrontend'
+    'designfrontend',
+    'projectmanager.apps.ProjectmanagerConfig'
 ]
 
 MIDDLEWARE = [
@@ -76,3 +77,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(
     'static'
 )
+AUTH_PASSWORD_VALIDATORS = []
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.TokenAuthentication",
+    )
+}
