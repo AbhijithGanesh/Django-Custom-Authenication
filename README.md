@@ -83,36 +83,3 @@ The barebones of this project was provided by Ufaber.
   
   `localhost:8000/api/project/<int:pk>/task/<int:pk>/delete`
   
-### Subtask
-
-- #### Create subtask:
-  Creates a new subtask for the associated task. Takes in name, description, start_date, end_date and assignee as input. One can provide multiple assignees by just providing the same key 'assignee'. 
-  
-  POST method.
-  
-  `Note`: The assignee must be mentioned in the task assignee. 
-  
-  `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/create`
-  
-- #### List subtask:
-  Lists the subtasks associated with the project task provided in url. 
-  
-  GET method
-  
-  `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/list`
-  
-- #### Update subtask:
-  Updates the subtasks. If the assignee exists, it will deassign him or vice versa. 
-  
-  PUT method
-  
-  `Note`: The assignee must be mentioned in the task assignee. 
-  
-  `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/<int:pk>/update`
-  
-- #### Delete subtask:
-  Deletes the subtask. 
-  
-  DELETE method
-  
-  `localhost:8000/api/project/<int:pk>/task/<int:pk>/subtask/<int:pk>/delete`
